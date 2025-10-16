@@ -1,6 +1,7 @@
 spring:
   application:
     name: api-gateway
+server:
   cloud:
     gateway:
           routes:
@@ -8,10 +9,13 @@ spring:
               uri: lb://user-service
               predicates:
                 - Path=/users/**
+              filters:
+                - RewritePath=/users/(?<path>.*), /${path}
             - id: order-service
               uri: lb://order-service
               predicates:
                 - Path=/orders/**
+  port: 8080
 
 eureka:
   client:
