@@ -1,24 +1,21 @@
+server:
+  port: 8080 # Or any port you prefer for the gateway
+
 spring:
   application:
     name: api-gateway
-server:
   cloud:
     gateway:
-          routes:
-            - id: user-service
-              uri: lb://user-service
-              predicates:
-                - Path=/users/**
-              filters:
-                - RewritePath=/users/(?<path>.*), /${path}
-            - id: order-service
-              uri: lb://order-service
-              predicates:
-                - Path=/orders/**
-  port: 8080
+      routes:
+        # Route to the user-service
+        - id: user-service-route
+          uri: lb://user-service # "lb" stands for load-balanced, using the service ID from Eureka
+          predicates:
+            - Path=/api/users/** # Match any request to /api/users/...
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
