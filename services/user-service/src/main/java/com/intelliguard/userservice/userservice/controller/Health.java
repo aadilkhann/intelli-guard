@@ -1,4 +1,4 @@
-package com.intelliguard.userservice.userservice.Controller;
+package com.intelliguard.userservice.userservice.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
