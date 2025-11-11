@@ -23,13 +23,13 @@ public class UserController {
     @GetMapping("all")
     public ResponseEntity<List<User>> getAllUsers() {
         List<User> users = userService.getUsers();
-        if (users.size()!=0) return new ResponseEntity<>(users,HttpStatus.OK);
+        if (!users.isEmpty()) return new ResponseEntity<>(users,HttpStatus.OK);
         return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
     }
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        return new ResponseEntity<>(new User(),HttpStatus.CREATED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @GetMapping("{id}")
