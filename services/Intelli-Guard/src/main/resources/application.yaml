@@ -11,7 +11,7 @@ spring:
         - id: user-service-route
           uri: lb://user-service # "lb" stands for load-balanced, using the service ID from Eureka
           predicates:
-            - Path=/api/users/** # Match any request to /api/users/...
+            - Path=/api/v1/users/** # Match any request to /api/v1/users/...
 
 eureka:
   client:

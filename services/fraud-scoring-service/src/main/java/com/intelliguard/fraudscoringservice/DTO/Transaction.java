@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Transction {
+public class Transaction {
     private String transactionId;
     private String userId;
     private double amount;

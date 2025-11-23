@@ -3,7 +3,7 @@
 **Version**: 1.0  
 **Date**: November 2025  
 **Status**: Draft  
-**Owner**: Product Team
+**Owner**: Adil Khan
 
 ---
 
@@ -471,14 +471,4 @@ IntelliGuard is a modular, production-grade security intelligence platform desig
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | Nov 2025 | Product Team | Initial draft |
-
----
-
-**Approval**
-
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| Product Owner | | | |
-| Engineering Lead | | | |
-| Security Lead | | | |
+| 1.0 | Nov 2025 | Adil Khan | Initial draft |
